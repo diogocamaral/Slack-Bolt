@@ -1,25 +1,224 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Store Url View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="StoreUrlViewController" customModule="Slack_Bolt" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Rc-bd-3t4" customClass="DesignableTextField" customModule="Slack_Bolt" customModuleProvider="target">
+                                <rect key="frame" x="15" y="168" width="288" height="64"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="oZH-9X-mjt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rightPadding">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TBx-0v-lTo" customClass="DesignableButton" customModule="Slack_Bolt" customModuleProvider="target">
+                                <rect key="frame" x="15" y="252" width="290" height="64"/>
+                                <color key="backgroundColor" red="0.21776741350000001" green="0.91735087130000004" blue="0.1044877328" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="uY3-nG-nZq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="saveButtonDidTouch:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="GMX-hh-mND"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1616852379" green="0.1616852379" blue="0.1616852379" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="TBx-0v-lTo" firstAttribute="top" secondItem="4Rc-bd-3t4" secondAttribute="bottom" constant="20" id="BWg-qe-ljt"/>
+                            <constraint firstAttribute="trailing" secondItem="4Rc-bd-3t4" secondAttribute="trailing" constant="17" id="JEz-R3-aVy"/>
+                            <constraint firstAttribute="trailing" secondItem="TBx-0v-lTo" secondAttribute="trailing" constant="15" id="gE5-hJ-Xz2"/>
+                            <constraint firstItem="4Rc-bd-3t4" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="15" id="grP-EX-4vF"/>
+                            <constraint firstItem="TBx-0v-lTo" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="15" id="m4N-eC-lH1"/>
+                            <constraint firstAttribute="centerX" secondItem="TBx-0v-lTo" secondAttribute="centerX" id="rwp-ek-CLp"/>
+                            <constraint firstAttribute="centerY" secondItem="TBx-0v-lTo" secondAttribute="centerY" id="zW0-N2-bRz"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="urlTextField" destination="4Rc-bd-3t4" id="M7j-ud-n7h"/>
+                        <segue destination="m9u-UC-XgQ" kind="presentation" identifier="storeUrlSegue" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="SjZ-1o-fMF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="395" y="462"/>
+        </scene>
+        <!--Chats-->
+        <scene sceneID="2zS-tO-5gs">
+            <objects>
+                <tableViewController id="ACQ-oe-evC" customClass="ChatsTableViewController" customModule="Slack_Bolt" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" id="LeC-xP-NJg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatCell" rowHeight="100" id="W7E-da-BS1">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="W7E-da-BS1" id="3Qd-qg-v9f">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="asdkajsdnjsadnsakjd nasjkdkjsa dasjnd kajsndasndlas ldansdl ksandl asndla nsd" translatesAutoresizingMaskIntoConstraints="NO" id="86A-yf-EYa">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="100" id="2gT-cC-zHU"/>
+                                            </constraints>
+                                            <color key="textColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="24"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                        </textView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="86A-yf-EYa" secondAttribute="trailing" id="EwB-aN-N96"/>
+                                        <constraint firstItem="86A-yf-EYa" firstAttribute="leading" secondItem="3Qd-qg-v9f" secondAttribute="leading" id="OL1-eN-7U3"/>
+                                        <constraint firstItem="86A-yf-EYa" firstAttribute="top" secondItem="3Qd-qg-v9f" secondAttribute="top" id="UJX-4Y-Rw6"/>
+                                        <constraint firstAttribute="bottom" secondItem="86A-yf-EYa" secondAttribute="bottom" id="vqY-KB-KXN"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ACQ-oe-evC" id="UXV-oo-uTs"/>
+                            <outlet property="delegate" destination="ACQ-oe-evC" id="Uyc-x4-u6P"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Chats" id="x9y-6H-NzL">
+                        <barButtonItem key="leftBarButtonItem" image="info-icon" id="6Ie-AO-IdZ">
+                            <connections>
+                                <action selector="infoButtonDidTouch:" destination="ACQ-oe-evC" id="rXE-1n-0Nt"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="plus-icon" id="jdK-gi-t5X">
+                            <connections>
+                                <action selector="newMessageButtonDidTouch:" destination="ACQ-oe-evC" id="Pvu-JU-0Cu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <segue destination="Ar1-c1-k8L" kind="show" identifier="newMessageSegue" id="TEq-TQ-i7Z"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XQi-yr-mVa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1369" y="462"/>
+        </scene>
+        <!--Message-->
+        <scene sceneID="frb-RI-mTu">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Ar1-c1-k8L" customClass="MessageViewController" customModule="Slack_Bolt" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JhS-Yn-mxY"/>
+                        <viewControllerLayoutGuide type="bottom" id="xaR-ZX-KRo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pdm-IX-wkB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZbR-jr-jcf">
+                                <rect key="frame" x="0.0" y="64" width="320" height="285"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="285" id="Uw0-W4-lSw"/>
+                                </constraints>
+                                <color key="textColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZbR-jr-jcf" firstAttribute="leading" secondItem="pdm-IX-wkB" secondAttribute="leading" id="2GQ-86-ym9"/>
+                            <constraint firstItem="ZbR-jr-jcf" firstAttribute="top" secondItem="JhS-Yn-mxY" secondAttribute="bottom" id="GCL-bj-po0"/>
+                            <constraint firstAttribute="trailing" secondItem="ZbR-jr-jcf" secondAttribute="trailing" id="O1v-n6-yns"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Message" id="ghW-gw-Naw">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="oCJ-wt-Deo">
+                            <connections>
+                                <segue destination="IsP-15-ooL" kind="unwind" unwindAction="unwindToViewController:" id="n0K-6G-oUv"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Send" id="yEh-OJ-Fjs">
+                            <connections>
+                                <action selector="sendButtonDidTouch:" destination="Ar1-c1-k8L" id="B4F-dW-oCD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="messageTextView" destination="ZbR-jr-jcf" id="nv9-xn-UbM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KK7-qJ-SeI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="IsP-15-ooL" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1842" y="462"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5WL-lP-xcm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="m9u-UC-XgQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="S1q-xs-EoT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.5" green="0.5" blue="0.5" alpha="0.0" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.04545314575" green="0.72859236049999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                            <color key="textColor" red="0.1616852379" green="0.1616852379" blue="0.1616852379" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ACQ-oe-evC" kind="relationship" relationship="rootViewController" id="fOh-OS-fQe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Ex-OK-rNA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="883" y="462"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="info-icon" width="10" height="21"/>
+        <image name="plus-icon" width="16" height="15"/>
+    </resources>
 </document>
