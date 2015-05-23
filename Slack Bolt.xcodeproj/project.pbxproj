@@ -43,6 +43,8 @@
 		D93423791B0FD2E000A5B03E /* TransitionZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = D934235C1B0FD2E000A5B03E /* TransitionZoom.swift */; };
 		D934237A1B0FD2E000A5B03E /* UnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D934235D1B0FD2E000A5B03E /* UnwindSegue.swift */; };
 		D934237C1B0FDDDD00A5B03E /* StoreUrlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D934237B1B0FDDDD00A5B03E /* StoreUrlViewController.swift */; };
+		D95AE5451B1140C5002853CA /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95AE53B1B11402F002853CA /* Alamofire.framework */; };
+		D95AE5461B1140CF002853CA /* Alamofire.framework in Copy Framework */ = {isa = PBXBuildFile; fileRef = D95AE53B1B11402F002853CA /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D9CEA0921B112EB50094E649 /* ChatsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CEA0911B112EB50094E649 /* ChatsTableViewController.swift */; };
 		D9CEA0941B1136E00094E649 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CEA0931B1136E00094E649 /* MessageViewController.swift */; };
 /* End PBXBuildFile section */
@@ -55,7 +57,56 @@
 			remoteGlobalIDString = D93423161B0FD10700A5B03E;
 			remoteInfo = "Slack Bolt";
 		};
+		D95AE53A1B11402F002853CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D95AE5331B11402F002853CA /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
+		D95AE53C1B11402F002853CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D95AE5331B11402F002853CA /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4DD67C0B1A5C55C900ED2280;
+			remoteInfo = "Alamofire OSX";
+		};
+		D95AE53E1B11402F002853CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D95AE5331B11402F002853CA /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS Tests";
+		};
+		D95AE5401B11402F002853CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D95AE5331B11402F002853CA /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F829C6B21A7A94F100A2CD59;
+			remoteInfo = "Alamofire OSX Tests";
+		};
+		D95AE5421B114067002853CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D95AE5331B11402F002853CA /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D95AE5441B114082002853CA /* Copy Framework */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				D95AE5461B1140CF002853CA /* Alamofire.framework in Copy Framework */,
+			);
+			name = "Copy Framework";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D93423171B0FD10700A5B03E /* Slack Bolt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Slack Bolt.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +150,7 @@
 		D934235C1B0FD2E000A5B03E /* TransitionZoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionZoom.swift; sourceTree = "<group>"; };
 		D934235D1B0FD2E000A5B03E /* UnwindSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnwindSegue.swift; sourceTree = "<group>"; };
 		D934237B1B0FDDDD00A5B03E /* StoreUrlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreUrlViewController.swift; sourceTree = "<group>"; };
+		D95AE5331B11402F002853CA /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		D9CEA0911B112EB50094E649 /* ChatsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatsTableViewController.swift; sourceTree = "<group>"; };
 		D9CEA0931B1136E00094E649 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,6 +160,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D95AE5451B1140C5002853CA /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +180,7 @@
 				D93423191B0FD10700A5B03E /* Slack Bolt */,
 				D93423321B0FD10700A5B03E /* Slack BoltTests */,
 				D93423181B0FD10700A5B03E /* Products */,
+				D95AE5331B11402F002853CA /* Alamofire.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -218,6 +272,17 @@
 			path = Spring;
 			sourceTree = "<group>";
 		};
+		D95AE5341B11402F002853CA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D95AE53B1B11402F002853CA /* Alamofire.framework */,
+				D95AE53D1B11402F002853CA /* Alamofire.framework */,
+				D95AE53F1B11402F002853CA /* Alamofire iOS Tests.xctest */,
+				D95AE5411B11402F002853CA /* Alamofire OSX Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -228,10 +293,12 @@
 				D93423131B0FD10700A5B03E /* Sources */,
 				D93423141B0FD10700A5B03E /* Frameworks */,
 				D93423151B0FD10700A5B03E /* Resources */,
+				D95AE5441B114082002853CA /* Copy Framework */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D95AE5431B114067002853CA /* PBXTargetDependency */,
 			);
 			name = "Slack Bolt";
 			productName = "Slack Bolt";
@@ -285,6 +352,12 @@
 			mainGroup = D934230E1B0FD10700A5B03E;
 			productRefGroup = D93423181B0FD10700A5B03E /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D95AE5341B11402F002853CA /* Products */;
+					ProjectRef = D95AE5331B11402F002853CA /* Alamofire.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				D93423161B0FD10700A5B03E /* Slack Bolt */,
@@ -292,6 +365,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		D95AE53B1B11402F002853CA /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = D95AE53A1B11402F002853CA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D95AE53D1B11402F002853CA /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = D95AE53C1B11402F002853CA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D95AE53F1B11402F002853CA /* Alamofire iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire iOS Tests.xctest";
+			remoteRef = D95AE53E1B11402F002853CA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D95AE5411B11402F002853CA /* Alamofire OSX Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire OSX Tests.xctest";
+			remoteRef = D95AE5401B11402F002853CA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D93423151B0FD10700A5B03E /* Resources */ = {
@@ -370,6 +474,11 @@
 			isa = PBXTargetDependency;
 			target = D93423161B0FD10700A5B03E /* Slack Bolt */;
 			targetProxy = D93423301B0FD10700A5B03E /* PBXContainerItemProxy */;
+		};
+		D95AE5431B114067002853CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Alamofire iOS";
+			targetProxy = D95AE5421B114067002853CA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
